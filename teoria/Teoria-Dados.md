@@ -39,7 +39,7 @@ Sistemas numéricos é a maneira como os seres humanos representam números, ao 
 
 O sistema decimal é o mais utilizado pelas civilizações modernas, nele utilizamos 10 símbolos: `0`, `1` ... `9` para representar qualquer número, essa notação remonta do fato de possuirmos 10 dedos em nossas mãos. Nesse sistema, cada digito possui um peso da ordem $10^n$:
 
-![](figs/Teoria/Dados-decimal.svg){width=400}
+![](./figs/Teoria/Dados-decimal.svg){width=400}
 
 !!! info "Algarismos indo-arábicos"
     O sistema de numeração hindu como a conhecemos hoje, pode ser atribuído a dois homens: o astrônomo Ariabata (आर्यभट) e seu pupilo Bhāskara I, durante 499-522 ac. Eles inventaram um sistema que se baseia na utilização da combinação de sílabas para formar os números, em um sistema incluindo a notação do zero. 
@@ -50,11 +50,12 @@ O sistema decimal é o mais utilizado pelas civilizações modernas, nele utiliz
 
 ## Base 2
 
-<iframe width="948" height="534" src="https://www.youtube.com/embed/7_t6IUJkJ1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 No sistema de base 2 possuímos apenas duas opções de símbolo: `0` e `1`. Nessa base, cada posição possui um peso da ordem $2^n$:
 
-![](figs/Teoria/Dados-binario.svg){width=500}
+![](./figs/Dados-binario.svg){width=500}
+
+!!! video
+    ![](https://www.youtube.com/embed/7_t6IUJkJ1E)
 
 Dessa maneira podemos construir o valor que desejarmos de decimal ($m$) em binário, para isso será necessário ocupar $ceil(log2(m))$ bits para armazenar o valor. A tabela a seguir ilustra algumas situações:
 
@@ -102,34 +103,21 @@ Supondo que possuímos um binário de três dígitos, um contador de `0` a `7` e
     0x100 != 0b100 != 100
       ```
    
-<div id="quiz-result" class="card">
-  Você acertou <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span id="quiz-max-score"></span><br/>
-</div>
+   
+!!! exercise choice two-cols "Base 2"
+    Converta `15` de decimal para base 2 (binário)
     
-!!! question "Quiz 1 - base 2"
-     <div id="quiz-1">
-            <!-- Question 1 -->
-            <div class="card quizlib-question">
-                <div class="quizlib-question-title">1. Quanto que é 0b00110 em decimal?</div>
-                <div class="quizlib-question-answers">
-                    <input type="text" name="">
-                </div>
-            </div>
-            <!-- Question 2 -->
-            <div class="card quizlib-question">
-                <div class="quizlib-question-title">2. Converta 15 de decimal para binário</div>
-                <div class="quizlib-question-answers">
-                    <ul>
-                        <li><label><input type="radio" name="q2" value="a"> 0015</label></li>
-                        <li><label><input type="radio" name="q2" value="b"> 1111</label></li>
-                        <li><label><input type="radio" name="q2" value="c"> 1110</label></li>
-                        <li><label><input type="radio" name="q2" value="d"> 1101</label></li>
-                    </ul>
-                </div>
-            </div>
-            <button type="button-quiz" onclick="showResults(this.parentNode.id);">Verificar resposta</button>
-      </div> 
+    - [ ] `0015`
+    - [x] `1111`
+    - [ ] `1110`
+    - [ ] `1101`
     
+    !!! answer      
+        ```
+         8+4+2+1 = 15
+         1 1 1 1
+        ```
+
 ### Definições
 
 Em muitas linguagens de programação é necessário definirmos o tamanho da variável que iremos armazenar um dado, para facilitar o entendimento damos nome a quantidade de bits que ela irá ocupar: 
@@ -143,19 +131,22 @@ Em muitas linguagens de programação é necessário definirmos o tamanho da var
 
 Existem diversas técnicas de conversão binário :arrows_counterclockwise: decimal, a seguir detalhes de como realizar essas conversões, o segredo é entender os pesos de cada casa de um `bit` no sistema binário e então fazer a conta inversa.
 
-<iframe width="948" height="534" src="https://www.youtube.com/embed/_68Cn5VuDxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/_68Cn5VuDxQ)
 
-<iframe width="948" height="534" src="https://www.youtube.com/embed/gOXO5H4i18Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/gOXO5H4i18Y)
 
 ## Base 16
 
-<iframe width="864" height="486" src="https://www.youtube.com/embed/uuUzkqSxCz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/uuUzkqSxCz4)
 
 A base 16, ou hexadecimal, é outra maneira de representarmos números utilizando não só `2` ou `10` símbolos como acabamos de ver, mas 16 símbolos! É como se conseguimos representar o valor `10` com um único carácter, no caso iremos utilizar o `A`.
 
 Nessa base, cada unidade possui um peso na forma $2^{16}$:
 
-![](figs/Teoria/Dados-hexa.svg){width=500}
+![](./figs/Teoria/Dados-hexa.svg){width=500}
 
 Um contador no formato hexadecimal possui a seguinte forma:
 
@@ -181,7 +172,8 @@ Um contador no formato hexadecimal possui a seguinte forma:
 
 ### Base 16 <--> Base 2
 
-<iframe width="864" height="486" src="https://www.youtube.com/embed/SU0HpCAkIxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/SU0HpCAkIxY)
 
 A conversão de número na base 16 para a base 2 e vice-versa acontece de forma trivial. Da base 2 para a base 16 basta separar os bits da palavra em unidades de 4 casas e então realizar a conversão de cada grupo de 4 bits para o seu equivalente em Hexa. Para a conversão de hexa para binário, basta converter cada símbolo de hexa para o seu equivalente em binário (4 dígitos), seguindo a tabela anterior.
 
@@ -329,7 +321,8 @@ No sistema [Binary-coded decimal (BCD)](https://pt.wikipedia.org/wiki/Codifica%C
 0011 0101 0110  : BCD
 ```
 
-<iframe width="900" height="506" src="https://www.youtube.com/embed/AM0tr8Kyvzg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/AM0tr8Kyvzg)
 
 ### ASCII
 
@@ -341,7 +334,8 @@ No sistema [Binary-coded decimal (BCD)](https://pt.wikipedia.org/wiki/Codifica%C
 
 Por exemplo, a palavra Insper convertido para ASCII fica da seguinte maneira (em decimal):
 
-![](figs/Teoria/Dados-ascii.svg){width=500}
+![](./figs/Teoria/Dados-ascii.svg){width=500}
 
-<iframe width="900" height="506" src="https://www.youtube.com/embed/zB85kTs-sEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+!!! video
+    ![](https://www.youtube.com/embed/zB85kTs-sEw)
+
