@@ -1,14 +1,14 @@
 # Componentes Síncronos 
 
 !!! info "Leitura necessária"
-    - [The Elements of Computing Systems (Livro texto do curso), cap 3](https://b1391bd6-da3d-477d-8c01-38cdf774495a.filesusr.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf) 
+    [The Elements of Computing Systems (Livro texto do curso), cap 3](https://b1391bd6-da3d-477d-8c01-38cdf774495a.filesusr.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf) 
     
-<div style="text-align: center;" class="no-print"><embed src="https://b1391bd6-da3d-477d-8c01-38cdf774495a.filesusr.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf"  width="650" height="500"></div>
+    <div style="text-align: center;" class="no-print"><embed src="https://b1391bd6-da3d-477d-8c01-38cdf774495a.filesusr.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf"  width="650" height="500"></div>
 
     
 ## Binary digit - `bits`
 
-![](figs/Teoria/Logica-Sequencial-bit.svg){width=300}
+![](.figs/Logica-Sequencial-bit.svg){width=300}
 
 Criado com um FlipFlop tipo D, esse componente (que vamos chamar de `bit`) é capaz de armazenar um bit e será usado na construção das unidades de memória utilizadas na CPU.
 
@@ -25,15 +25,15 @@ Pseudo código que descreve o funcionamento do bit é:
 
 ``` python
 if load = '1' then:
-  q = d
-d = d
+  out = in
+out = out
 ```
 
 ## Registrador
 
-![](figs/Teoria/Logica-Sequencial-reg.svg){width=400}
+![](.figs/Logica-Sequencial-reg.svg){width=400}
 
-O registrador é um componente formado por vários `bits` e é capaz de armazenar um vetore de bits: 8 bits; 16 bits; 32 bits; ... . 
+O registrador é um componente formado por vários `bits` e é capaz de armazenar um vetor de bits: 8 bits; 16 bits; 32 bits; ... . 
 
 Pseudo código que descreve o funcionamento do register e 
 
@@ -50,7 +50,7 @@ Internamente o `register` é formado por diversos `bits`, um para cada index do 
 Ele é utilizado geralmente dentro da CPU, como uma memória do tipo 'rápida'.
 
 !!! note
-    Podemos utilizar registradores de largura `w` para construir registradores de largura m*`w`:
+    Podemos utilizar registradores de largura `w` para construir registradores de largura `m*w`:
     
     ```
       --------------------------------
@@ -61,7 +61,7 @@ Ele é utilizado geralmente dentro da CPU, como uma memória do tipo 'rápida'.
     ```
 
 !!! tip "uso"
-    ![](figs/Teoria/LogicaSequencial-reg2.svg){width=400}
+    ![](.figs/LogicaSequencial-reg2.svg){width=400}
     
     Na nossa CPU do lab 10, o registrador é o HW que armazena a saída da ULA, nesse
     caso ele possui 16 bits de largura!

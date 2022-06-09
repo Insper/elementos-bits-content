@@ -1,9 +1,7 @@
 # Lógica Sequencial
 
-!!! success "2020-2"
-    Material atualizado.
-
-<iframe width="692" height="519" src="https://www.youtube.com/embed/lNW2d26S-gI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/lNW2d26S-gI)
 
 !!! info "Colossus"
     O Colossus foi um computador Britânico de 1700 válvulas, feito
@@ -23,11 +21,11 @@
 
 Até este momento do curso só usamos circuitos criados com lógica combinacional, porém nem todos os tipos de lógica digital podem ser enquadrados nessa categoria. Nessa lógica uma tabela verdade define bem a saída de um circuito. Nesses casos, podemos dizer que ao colocar os sinais nas entradas de uma unidade lógica aritmética temos quase que instantaneamente uma saída válida independente dos sinais que estavam anteriormente no circuito. 
 
-![](figs/Teoria/LogicaSequencial-Combinacional.png){width=400}
+![](./figs/LogicaSequencial-Combinacional.png){width=400}
 
 Já na lógica sequencial o estado anterior das entradas influencia na saída, ou seja, essa lógica possui uma memória. E é justamente essa característica de memória de estados anteriores que nos interessa. Podemos por exemplo armazenar valores para uso futuro, ou tomar uma decisão com base no estado anterior/atual.
 
-![](figs/Teoria/LogicaSequencial-visaoGeral.png){width=600}
+![](./figs/LogicaSequencial-visaoGeral.png){width=600}
 
 http://www.inf.pucrs.br/~emoreno/undergraduate/SI/orgarq/class_files/Aula06.pdf
 http://www.ee.surrey.ac.uk/Projects/CAL/seq-switching/General_seq_circ.htm
@@ -62,7 +60,7 @@ Neste circuito normalmente as entradas `S` e `R`, conhecidas como Set e Reset, f
     
 Um outro circuito biestável é o latch tipo D, nesse caso o circuito mantem o valor da entrada de Dados D enquanto a entrada de Enable `E` estiver em nível alto, se o sinal `E` for para nível baixo o circuito não muda de estado. 
 
-![](figs/Teoria/Logica-Sequencial-latch-D.svg){width=300}
+![](./figs/Logica-Sequencial-latch-D.svg){width=300}
 
 Esse componente possui a tabela verdade a seguir:
 
@@ -74,7 +72,8 @@ Esse componente possui a tabela verdade a seguir:
 | `0` | `1` | Copia Entrada `D`: `1` | Copia Entrada `D` negada: `0` |
 
 
-<iframe width="900" height="506" src="https://www.youtube.com/embed/KGVeOCovTEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/KGVeOCovTEQ)
 
 ## Clock
 
@@ -86,7 +85,7 @@ Imagine um sistema com centenas de milhares de portas lógicas onde um sinal pod
 
 O clock é um sinal elétrico periódico utilizado para sincronizar sistemas digitais, utilizado em todo circuito síncrono, serve como o 'baterista' da banda, dando o ritmo de execução para a eletrônica. A cada novo clock (instante que ocorre uma mudança no sinal `0` -> `1`), o sistema começa uma nova operação. O sinal do clock é geralmente periódico e de modulação 50% (50% em alto e 50% em baixo):
 
-![](figs/Teoria/Logica-Sequencial-clock.svg){width=500}
+![](./figs/Logica-Sequencial-clock.svg){width=500}
 
 !!! note "Frequência"
     F=1/L
@@ -107,10 +106,11 @@ O clock é um sinal elétrico periódico utilizado para sincronizar sistemas dig
     - borda de descida (`falling_edge`): `1` -> `0`.
     - double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (**Dai que vem o nome da memória DDR4 do seu computador!**)
     
-<iframe width="640" height="360" src="https://www.youtube.com/embed/CDjQlw8bRU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/CDjQlw8bRU8)
     
 - http://slideplayer.com.br/slide/370185/
--  http://www.plantation-productions.com/Webster/www.artofasm.com/Linux/HTML/SystemOrganizationa4.html
+- http://www.plantation-productions.com/Webster/www.artofasm.com/Linux/HTML/SystemOrganizationa4.html
 - http://www.gitam.edu/eresource/comp/gvr/6.1.htm
 
 ## Flip-Flop
@@ -138,11 +138,11 @@ O FF tipo D possui as seguintes portas:
 - $\bar{Q}$ saída do dado copiado
 - $CLK$ entrada do clock
 
-![](figs/Teoria/Logica-Sequencial-FF-D.svg){width=300}
+![](.figs/Logica-Sequencial-FF-D.svg){width=300}
 
 Toda vez que o ocorre uma borda de subina no `clock`, o sinal que está na entrada `D` é copiado para a saída `Q`, conforme diagrama a seguir:
 
-![](figs/Teoria/Logica-Sequencial-FF-D-time.svg){width=500}
+![](.figs/Logica-Sequencial-FF-D-time.svg){width=500}
 
 A tabela verdade desse componente é representada da seguinte maneira:
 
@@ -170,4 +170,5 @@ A tabela verdade com esses sinais a mais fica:
 | `0`      | `0`   | `0`   | `^`        | `0`       |
 | `1`      | `0`   | `0`   | `^`        | `1`       |
 
-<iframe width="900" height="506" src="https://www.youtube.com/embed/60ne-hmsd8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/60ne-hmsd8g)
