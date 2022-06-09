@@ -337,5 +337,4 @@ Por exemplo, a palavra Insper convertido para ASCII fica da seguinte maneira (em
 ![](./figs/Teoria/Dados-ascii.svg){width=500}
 
 !!! video
-    ![](https://www.youtube.com/embed/zB85kTs-sEw)
-
+![](https://www.youtube.com/embed/zB85kTs-sEw)
