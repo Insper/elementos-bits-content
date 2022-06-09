@@ -20,7 +20,7 @@ while True:
 
 A maneira de realizarmos esse tipo de condição é com instruções de salto (`jump`), uma instrução de salto verifica uma determinada condição e realiza ou não o salto com base nessa condição, alterando o PC.
 
-![](figs/Teoria/Z0-nasm-jump.svg)
+![](./figs/Z0-nasm-jump.svg)
 
 A sequência de execução do código é ditada pelo Program Counter (PC), um salto acontece quando o PC sofre uma mudança da sua sequência natural:
 
@@ -47,7 +47,7 @@ PC: 0 1 2 3 4   0 1 2 3 4 x
 
 Para executarmos um salto é necessário alterarmos o valor do PC, no Z01 isso é feito utilizando o valor que está salvo no registrador `%A`. No nosso caso, antes de realizarmos um salto é necessário carregarmos em `%A` o endereço da qual desejamos ir caso o salto se realize (condição). 
 
-![](figs/Teoria/Z0-nasm-pc.png)
+![](./figs/Z0-nasm-pc.png)
 
 O exemplo a seguir realiza um loop infinito (e não faz nada), ele trava nesse loop:
 
@@ -59,7 +59,7 @@ O exemplo a seguir realiza um loop infinito (e não faz nada), ele trava nesse l
     ``` 
 
 === "simulador"
-    ![](figs/Teoria/Z0-jmp-loop.gif)
+    ![](./figs/Z0-jmp-loop.gif)
 
 O PC desse código fica:
 
@@ -115,7 +115,7 @@ O código anterior ficaria o seguinte com uso de label:
     ```
 
 === "simulador"
-    ![](figs/Teoria/Z0-jmp-loop-label.gif)
+    ![](./figs/Z0-jmp-loop-label.gif)
 
 !!! note
     O label não é uma instrução, é um nome para a linha em questão e portanto não é convertido para nenhuma operação de hardware. 
@@ -176,7 +176,7 @@ O salto condicional é aquele que é utilizado para realizarmos `if ... else`, n
     === "simulador"
         > RAM[1] = 0
  
-        ![](figs/Teoria/Z0-nasm-jump-cond1.gif)
+        ![](./figs/Z0-nasm-jump-cond1.gif)
         
 
 !!! warning
@@ -196,5 +196,4 @@ O salto condicional utiliza o comparador que está dentro da nossa ULA para veri
 1. Esses sinais vão até o `Control Unit`
 1. O `control Unit` verifica a condição do salto e os valores de `ng` e `zr`, se forem condizentes, faz `load_PC <= '1'` caso contrário, não salta `load_pc <= '0'` .
 
-![](figs/Teoria/Z0-nasm-pc.svg)
-
+![](./figs/Z0-nasm-pc.svg)

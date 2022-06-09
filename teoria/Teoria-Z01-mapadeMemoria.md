@@ -1,11 +1,8 @@
 # ASM - Mapa de memória
 
-!!! success "2020-2"
-    Material atualizado.
-
 A forma na qual a maioria das CPUs acessam periféricos (teclado/ mouse/ USB/ tela/ ...) é a do periférico mapeado em memória. Essa técnica utiliza da capacidade do computador de escrever e ler da memória RAM, **fazendo com que regiões de endereços da memória não sejam uma 'memória' física, mas sim um periférico do computador.**
 
-![](figs/Teoria/Z0-mapa-de-memoria.svg){width=500}
+![](./figs/Z0-mapa-de-memoria.svg){width=500}
 
 Vamos trabalhar com o exemplo do nosso Z01, a memória é composta de:
 
@@ -16,19 +13,19 @@ Vamos trabalhar com o exemplo do nosso Z01, a memória é composta de:
 
 Nesse nosso hardware a memória que é visível pela CPU é organizada da seguinte maneira:
 
-| Endereço            | Periférico           | Leitura (`r`) / Escrita (`w`) |
-| ------------------- | -------------------- |                           |
-| 0    -     16383    | RAM                  | r/w                       |
-| 16384 - 21183       | LCD                  | w                         |
-| 21184               | LED                  | w                         |
-| 21185               | SW                   | r                         |
+| Endereço         | Periférico | Leitura (`r`) / Escrita (`w`) |
+|------------------|------------|-------------------------------|
+| 0    -     16383 | RAM        | r/w                           |
+| 16384 - 21183    | LCD        | w                             |
+| 21184            | LED        | w                             |
+| 21185            | SW         | r                             |
 
 
 ## RAM
 
-| Endereço            | Periférico           | Leitura (`r`) / Escrita (`w`) |
-| ------------------- | -------------------- |                           |
-| 0    -     16383    | RAM                  | r/w                       |
+| Endereço         | Periférico | Leitura (`r`) / Escrita (`w`) |
+|------------------|------------|-------------------------------|
+| 0    -     16383 | RAM        | r/w                           |
 
 A memória RAM é um componente do computador que permite guardar dados voláteis (que vão se perder após o reset do computador). É nela que guardamos as variáveis do programa. 
 
@@ -67,10 +64,10 @@ A princípio podemos utilizar qualquer endereço da memória RAM para armazenar 
         ```
 
     === "simulador"
-        ![](figs/Teoria/Z0-nasm-ram-simulator.gif){width=600}
+        ![](./figs/Z0-nasm-ram-simulator.gif){width=600}
 
     === "hardware"
-        ![](figs/Teoria/Z0-nasm-ram.gif)
+        ![](./figs/Z0-nasm-ram.gif)
 
 
 !!! tip
@@ -90,12 +87,12 @@ A princípio podemos utilizar qualquer endereço da memória RAM para armazenar 
 
 ## LEDs
 
-| Endereço            | Periférico           | Leitura (`r`) / Escrita (`w`) |
-| ------------------- | -------------------- | -----------                   |
-| 21184               | LED                  | w                             |
+| Endereço | Periférico | Leitura (`r`) / Escrita (`w`) |
+|----------|------------|-------------------------------|
+| 21184    | LED        | w                             |
 
 
-![](figs/Teoria/Z0-mapa-de-memoria-leds.svg){width=500}
+![](./figs/Z0-mapa-de-memoria-leds.svg){width=500}
 
 Os LEDs da FPGA são mapeados no endereço de memória `21184` onde cada bit (9..0) representa um LED, se o bit específico estiver valor `1`o LED está aceso e `0` apagado.
 
@@ -110,21 +107,22 @@ Os LEDs da FPGA são mapeados no endereço de memória `21184` onde cada bit (9.
         ```
 
     === "simulador"
-        ![](figs/Teoria/Z0-mapa-de-memoria-leds.gif){width=600}
+        ![](./figs/Z0-mapa-de-memoria-leds.gif){width=600}
 
 !!! tip
     Execute você esse código no simulador!
 
 !!! tip
-    Note que usamos `movw $1, (%A)`, nossa ULA é capaz de gerar os valores `1`, `-1` e `0`, mas outros valores não!
+    Note que usamos `movw $1, (%A)`. Isso é possível porque nossa ULA é capaz de gerar os valores `1`, `-1` e `0`, mas outros valores não!
 
 ## SW
 
-| Endereço            | Periférico           | Leitura (`r`) / Escrita (`w`) |
-| ------------------- | -------------------- | --------                      |
-| 21185               | SW                   | r                             |
+| Endereço | Periférico | Leitura (`r`) / Escrita (`w`) |
+|----------|------------|-------------------------------|
+| 21185    | SW         | r                             |
+|          |            |                               |
 
-![](figs/Teoria/Z0-mapa-de-memoria-sw.svg){width=500}
+![](./figs/Z0-mapa-de-memoria-sw.svg){width=500}
 
 Os chaves (SW) da FPGA são mapeados no endereço de memória `21185` onde cada bit (9..0) representa uma chave, se o bit específico estiver valor `1` indica que a chave está ligada (on) e `0` desligada.
 
@@ -141,7 +139,7 @@ Os chaves (SW) da FPGA são mapeados no endereço de memória `21185` onde cada 
         ```
 
     === "simulador"
-        ![](figs/Teoria/Z0-nasm-sw-simulator.gif){width=600}
+        ![](./figs/Z0-nasm-sw-simulator.gif){width=600}
 
 !!! tip
     Execute você esse código no simulador!
@@ -153,7 +151,7 @@ Os chaves (SW) da FPGA são mapeados no endereço de memória `21185` onde cada 
 | 16384 - 21183       | LCD                  | w                         |
 
 
-![](figs/Teoria/Z0-mapa-de-memoria-lcd.svg){width=500}
+![](./figs/Z0-mapa-de-memoria-lcd.svg){width=500}
 
 O nosso LCD é um dispositivo de `320x240` pixels. Cada linha do endereço de memória do LCD representa `16` pixels do dispositivo, conforme figura anterior. Para acender um pixel, basta colocar `1` ou `0` para apagar.-
 
@@ -169,7 +167,7 @@ O nosso LCD é um dispositivo de `320x240` pixels. Cada linha do endereço de me
 
 
 !!! example "LCD"
-    Vamos desenhar px no meio do LCD que, para isso precisamos carregar o valor  0x`0001` no endereço `18242`
+    Para desenhar um pixel no meio do LCD é necessário carregar o valor `0x0001` no endereço `18242`
 
     ```nasm
     leaw $18242, %A
