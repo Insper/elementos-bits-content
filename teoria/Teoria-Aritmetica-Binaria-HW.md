@@ -36,7 +36,8 @@ E é implementado em hardware da seguinte maneira:
 
 ## full-adder (FAD)
 
-<iframe width="571" height="286" src="https://www.youtube.com/embed/RK3P9L2ZXk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/RK3P9L2ZXk4)
 
 Full-adder é um componente digital capaz de somar três vits (`a`, `b` e `c`) e possui como saída o valor da `soma` e do `carry` resultante da operação. A seguir um diagrama de blocos de um `FAD`:
 
@@ -47,7 +48,7 @@ Full-adder é um componente digital capaz de somar três vits (`a`, `b` e `c`) e
 O FAD possui a seguinte tabela verdade:
 
 | a   | b   | c   | Carry (out) | Soma (out) |
-| --  | --  | --  | -----       | -----      |
+|-----|-----|-----|-------------|------------|
 | `0` | `0` | `0` | `0`         | `0`        |
 | `0` | `0` | `1` | `0`         | `1`        |
 | `0` | `1` | `0` | `0`         | `1`        |
@@ -66,7 +67,7 @@ E é implementado da seguinte maneira em portas lógicas:
 !!! tip
     Você deve ser capaz de encontrar esses circuitos analisando a tabela verdade e simplificando via Mapa de K.
     
-    ![](figs/Teoria/Adders-kmap-FAD.png)
+    ![](./figs/Adders-kmap-FAD.png)
     
     Note que existem duas abordagens para representar o Carry_out: `A.B+A.C+B.C`e `A.B+C(A xor B)`
     
@@ -74,8 +75,8 @@ E é implementado da seguinte maneira em portas lógicas:
 
 ## Somador
 
-!!! tip
-    <iframe width="571" height="302" src="https://www.youtube.com/embed/NO7Gt8IDSGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/NO7Gt8IDSGA)
 
 Utilizando o FAD somos capazes de realizar um somador de dois vetores binários. Para isso, teremos que utilizar um full-adder para cada bit desse nosso vetor. 
 
@@ -86,5 +87,3 @@ Por exemplo: se formos criar um Somador capaz de somar dois vetores de `4bits`, 
 > Fonte: https://en.wikipedia.org/wiki/Adder_(electronics)
 
 Nesse diagrama, estamos realizando a soma ente os vetores `A(3 downto 0)` e `B(3 downto 0)` que resulta em um outro vetor `S(3 downto 0)` e um carry `C4`.
-
-

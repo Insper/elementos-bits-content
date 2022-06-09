@@ -1,11 +1,9 @@
 # Aritmética Binária
 
-!!! success "2020-2"
-    Material atualizado.
-
 - Conteúdo: Complemento de um/ Complemento de dois/ Ponto fixo/ Soma binária/ 
 
-<iframe width="571" height="428" src="https://www.youtube.com/embed/dVixMB1uSYA?start=810 " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/dVixMB1uSYA?start=810 )
 
 Podemos utilizar números binários para codificar qualquer tipo de dado, como vimos na teoria de dados digitais. Mas ainda não sabemos como utilizar números binários para representar: números inteiros que possam ser negativos e números reais fracionados (exemplo: `-15`;  `1,032`; `-0,0001`; `10001231231`).
 
@@ -13,7 +11,8 @@ Essa teoria irá tratar desses temas e também da parte referente a operações 
 
 ## Soma binária
 
-<iframe width="831" height="468" src="https://www.youtube.com/embed/NFTG-VGkik8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/NFTG-VGkik8)
 
 A soma binária é realizada de maneira similar a soma de decimais, só que precisamos ==reforçar== que `1+1` em binário (**esse + é de soma não de OR**), resulta em `10`, o `1` do estouro e que passa para a próxima casa é chamado de `carry`. Esse `carry` é similar ao `vai um` em uma soma decimal, por exemplo: quando somamos em decimal `9` + `3` o resultado é `12` (10 + 2).
 
@@ -142,7 +141,8 @@ O problema do complemento de 1 é que:
 
 ## Complemento de 2
 
-<iframe width="613" height="460" src="https://www.youtube.com/embed/NED9IIpteXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/NED9IIpteXA)
 
 O complemento de dois é uma outra maneira de representar números sinalizados com bits, essa técnica possui alguams vantagens:
 
