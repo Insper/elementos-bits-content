@@ -1,14 +1,32 @@
 # Começando novo projeto
 
-!!! linux
-    Usar o Linux fornecido!
-
 !!! warning "Scrum Master"
-    O grupo deve escolher um mediador
-    
-    ==Aconselhável no primeiro projeto o facilitador ser aquele que tem mais facilidade com linux e git.==
+    1. O grupo deve escolher um novo mediador
+    1. ==Aconselhável no primeiro projeto o facilitador ser aquele que tem mais facilidade git.==
+    1. Até que todos tenham sido mediadores, não pode repetir.
 
 Você deve fazer a secção do seu papel: Mediador/ Desenvolvedor
+
+## Atualizando infra
+
+!!! warning
+    Todos devem realizar essa etapa: Mediadores e Desenvolvedores
+
+Atualizar a infra da disciplina executando o comando a seguir na pasta raiz ro repositório:
+
+=== "Elementos"
+
+    ```bash
+    $ ./updateZ01tools.sh
+    ```
+
+    Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
+
+=== "Bits e Proc"
+    `pip3 install "bits-e-proc"`
+    
+    Irá instalar a lib python que possui a infra de testes da disciplina.
+
 
 ## Antes de começar - Mediador
 
@@ -26,9 +44,14 @@ No terminal:
 
 1. Referenciando repositório original da disciplina
 
-``` bash
-$ git remote add upstream https://github.com/insper/Z01.1
-```
+=== "Elementos"
+    ``` bash
+    $ git remote add upstream https://github.com/insper/Z01.1
+    ```
+=== "Bits e Proc"
+    ``` bash
+    $ git remote add upstream git@github.com:Insper/bits-e-proc.git
+    ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:
 
@@ -38,32 +61,11 @@ $ git checkout main
 $ git merge upstream/main
 ```
 
-Feito isso deve ter aparecido uma nova pasta dentro do repositório de vocês: `Projetos/B-LogicaCombinacional/`.
-<!--
-### travis
+Novos arquivos devem ter aparecido no repositório, para saber quais:
 
-!!! tip "Arquivos ocultos"
-    No linux os arquivos que começam com `.` são ocultos, ou seja, eles não
-    aparecem normalmente no gerenciador de arquivos ou no comando `ls`, para ver os arquivos ocultos:
-    
-    - No gerenciador de arquivos aperte <kbd>crtl</kbd>+<kbd>h</kbd> (*h de hide*)
-    - `ls -a` (*onde -a indica all*)
-
-Edite o arquivo `.travis.yml` localizado na raiz do repositório modificando o final do arquivo para ficar como:
-
-``` yml
-script:
-   - python3 Projetos/A-AmbienteDesenvolvimento/testeAmbienteDesenvolvimento.py
-   - python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py 
+``` bash
+$ git diff HEAD~ --name-only
 ```
-
-Agora vamos realizar um commit e submeter aos demais colegas do grupo as alterações:
-
-```bash
-$ git add .travis.yml
-$ git commit -m "configurando travis para novo projeto"
-```
--->
 
 ### Actions
 
@@ -74,13 +76,16 @@ $ git commit -m "configurando travis para novo projeto"
     - No gerenciador de arquivos aperte <kbd>crtl</kbd>+<kbd>h</kbd> (*h de hide*)
     - `ls -a` (*onde -a indica all*)
 
-Edite o arquivo `actions.yml` localizado na pasta .github/workflows/ modificando o final do arquivo para ficar como:
+Edite o arquivo `actions.yml` localizado na pasta `.github/workflows/` modificando o final do arquivo para ficar como:
 
-``` yml
-        python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
-        python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
-        python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
-```
+=== "Elementos"
+    ``` yml
+            python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
+            python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
+            python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
+    ```
+=== "Bits e Proc"
+    TODO
 
 Agora vamos realizar um commit e submeter aos demais colegas do grupo as alterações:
 
@@ -129,15 +134,3 @@ Agora todos os integrantes do grupo devem atualizar o repositório local:
 $ git pull origin main
 ```
 
-## Atualizando Infra
-
-!!! warning
-    Todos devem realizar essa etapa: Mediadores e Desenvolvedores
-
-Atualizar a infra da disciplina executando o comando a seguir na pasta raiz ro repositorio:
-
-```bash
-$ ./updateZ01tools.sh
-```
-
-Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
