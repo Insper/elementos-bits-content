@@ -7,7 +7,7 @@
 
 Vocês estavam desenvolvendo o projeto F quando o teste de integração `./testeAssemblyMyCpu.py` falhou no nasm descrito a seguir. Um colega do grupo enviou o waveform a seguir para você encontrar o problema (você deve falar o que está falhando). 
 
-[![](figs/Exercicios/CPU-fail-add-loadA.png)](figs/Exercicios/CPU-fail-add-loadA.png)
+[![](figs/CPU-fail-add-loadA.png)](figs/CPU-fail-add-loadA.png)
 
 !!! tip
     1. clique na imagem para ampliar
@@ -39,14 +39,13 @@ Que possui a RAM iniciada com os seguintes valores:
     
     - Se o vídeo não abrir acesse pelo link e faça o download:  http://54.162.111.146/shared/ele/erro-loadA.mp4
 
-
 ## Engenharia reversa
 
 Você foi chamado para fazer engenharia reversa em um programa executando no HW do Z01, na captura de dados a equipe responsável não conseguiu capturar o sinal da Instrução, e não sabem quais comandos estão sendo executados no computador.
 
 Encontre os ==três== comandos em nasm que estão sendo executados no hardware nesse momento:
 
-[![](figs/Exercicios/CPU-eng-rev.png)](figs/Exercicios/CPU-eng-rev.png)
+[![](figs/CPU-eng-rev.png)](figs/CPU-eng-rev.png)
 
 !!! tip
     1. clique na imagem para ampliar
@@ -59,5 +58,3 @@ Encontre os ==três== comandos em nasm que estão sendo executados no hardware n
     </video> 
     
     - Se o vídeo não abrir acesse pelo link e faça o download: http://54.162.111.146/shared/ele/eng-rev.mp4
-
-
