@@ -1,6 +1,7 @@
 # VM
 
-<iframe width="1000" height="569" src="https://www.youtube.com/embed/U9DRGBVp8Eg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/U9DRGBVp8Eg)
 
 A linguagem VM proposta para o curso é baseada em pilha (assim como tantas outras), as operações nesse nível não lidam mais com registradores do computador porém com dados que são colocados e tirados de uma pilha (`stack`). Uma grande vantagem disso é a abstração do hardware, agora não precisamos mais nos preocuparmos com a manipulação dos dados em baixo nível e saber por exemplo quantos registradores possuímos (o VMTranslator será encarregado disso). Um código escrito em VM passa pelas seguintes etapas antes de ser executado em máquina :
 
@@ -65,7 +66,8 @@ Temos diversas vantagens quando programamos em linguagem virtual:
 
 ## Pilha
 
-<iframe width="526" height="395" src="https://www.youtube.com/embed/5N0rTGZHdwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/5N0rTGZHdwY)
 
 A linguagem VM é baseada em pilha, ou seja, todas as operações que serão realizadas serão feitas na pilha. A pilha é uma região da memória RAM (no nosso caso começa no endereço 256 da memória RAM) reservada para armazenar os dados que estão sendo manipulados.
 
@@ -84,7 +86,7 @@ Esse código carrega as constantes 3 e 7 para a pilha e faz soma deles, o result
 
 !!! info "Notaçào 
 
-![Stack](figs/I-VM/Stack.svg)
+![Stack](../figs/vm/Stack.svg)
 
 !!! note "Explicando"
     1. A pilha começa vazia e o Stack Pointer (SP) aponta para `256`
@@ -97,7 +99,7 @@ Esse código carrega as constantes 3 e 7 para a pilha e faz soma deles, o result
 
 O Stack Pointer é o endereço de memória (==RAM[0]==) reservado por apontar o topo da pilha, ou seja, a próxima posição vazia da pilha. O `SP` é salvo na RAM 0 (R0) e deve ser incrementado/decrementado conforme a pilha vai sendo manipulada.
 
-![Stack Pointer](figs/I-VM/SP.svg)
+![Stack Pointer](../figs/vm/SP.svg){width=200}
 
 ## Operações
 
@@ -153,7 +155,7 @@ São suportadas as seguintes operações aritméticas na pilha:
          -> eq ->    -> gt ->
      0x2          0x2         0xFFFF
      0x3          0x0    SP->
-     0x5      SP->
+     0x5     SP->
 SP->
 ```
 
@@ -161,10 +163,10 @@ SP->
     A pilha não é 'limpada' a cada operação, os endereços que não sofreram modificação dado uma operação continuam lá, mas você não pode considerar que eles são válidos! Se olharmos a memória real do exemplo anterior seria a seguinte:
 
     ```
-              -> eq ->      -> gt ->
-        0x2            0x2          0xFFFF
-        0x3            0x0     SP-> 0x0
-        0x5       SP-> 0x5          0x5
+               -> eq ->      -> gt ->
+         0x2            0x2          0xFFFF
+         0x3            0x0     SP-> 0x0
+         0x5       SP-> 0x5          0x5
     SP-> 0x0            0x0          0x0
     ```
 

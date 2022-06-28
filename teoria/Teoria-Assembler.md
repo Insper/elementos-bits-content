@@ -23,7 +23,7 @@ Podemos dizer que é um mapeamento um para um, assim cada instrução Assembly v
 
 ## O que um assembler faz?
 
-![](figs/Teoria/Assembler-assembler.svg)
+![](./figs/Assembler-assembler.svg)
 
 !!! info "Assembler"
     Em português é conhecido como **montador**.
@@ -50,7 +50,7 @@ O assemble faz a análise sintática (parsing) dos arquivos, identificando cada 
 
 Fazer o Parsing significa detectar cada símbolo para determinar a estrutura sintática de uma expressão, que é escrita de acordo com as regras de uma determinada gramática. Para analisar essa expressão, você tem que dividi-la no que chamamos de tokens:
 
-![](figs/Teoria/Assembler-parsing.svg)
+![](./figs/Assembler-parsing.svg)
 
 ### Símbolos
 
@@ -80,7 +80,7 @@ leaw $LED, %A
 
 O programa assembler varre o código em busca desses símbolos e cria uma tabela relacionando o seu nome a um valor que pode ser convertido em binário:
 
-![](figs/Teoria/Assembler-symbol.svg)
+![](./figs/Assembler-symbol.svg)
 
 Sempre que o assembler encontrar um símbolo, ele consulta essa tabela em busca do valor associado a ele.
 
@@ -88,7 +88,7 @@ Sempre que o assembler encontrar um símbolo, ele consulta essa tabela em busca 
 
 O assembler necessita ler os opcodes e transformar em linguagem de máquina. É essa etapa que irá realmente criar uma saída binária. A geração de código deve identificar o tipo do comando que está sendo executado, os seus parâmetros e símbolos e então gerar a saída binária com base no instruction set de referência.
 
-![](figs/Teoria/Assembler-code.svg)
+![](./figs/Assembler-code.svg)
 
 
 ## Ferramental do curso
@@ -98,9 +98,16 @@ Desenvolvemos no projeto E-Assembly uma série de programas escritos em nasm, ma
 1. O script abre o arquivo de configurações de teste: `config.txt` e busca quais módulos nasm deve compilar
 1. Para cada arquivo `.nasm` encontrado é chamado um programa em java que é o assembler, exemplo:
 
-``` bash
-$ java -jar ~/Z01-Tools/jar/Z01-Assembler.jar -i ./src/add.nasm -o /bin/add.hack
-```
+=== "Elementos"
+    ``` bash
+    $ java -jar ~/Z01-Tools/jar/Z01-Assembler.jar -i ./src/add.nasm -o /bin/add.hack
+    ```
+    
+=== "BCC"
+    ```bash
+    $ ./bits.py assembler from-nasm sw/assembly/add.nasm add.hack
+    ```
+
 
 !!! tip
     Experimente você rodar esse comando e ver o que ele gera de output.

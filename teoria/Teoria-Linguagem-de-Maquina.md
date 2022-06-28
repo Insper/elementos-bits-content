@@ -29,7 +29,7 @@ A linguagem de máquina utilizada no curso é adaptada do livro Texto com umas p
 
 A seguir a definição da linguagem de máquina da nossa CPU:
 
-![](figs/Hardware/IS-Z011.svg)
+![](../figs/hardware/IS-Z011.svg)
 
 ### Instruções do tipo A
 
@@ -43,7 +43,7 @@ No versão atual da CPU só possuímos uma instrução nessa categoria, a `leaw`
     
 ### Instruções do tipo C
 
-Instruções do tipo C são aquelas que computam alguma coisa (númerico ou lógico), movem dados, ou realizam mudanças no Program Counter (salto / jump condicional ou não-condicional). Essas instruções são definidas pelo `bit17 = 1`.
+Instruções do tipo C são aquelas que computam alguma coisa (númerico ou lógico), movem dados, ou realizam mudanças no *Program Counter* (salto / jump condicional ou não-condicional). Essas instruções são definidas pelo `bit17 = 1`.
 
 !!! example 
     - `addw %A, %D, %D`

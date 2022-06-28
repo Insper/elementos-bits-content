@@ -1,26 +1,27 @@
 # VM - Funções
 
-<iframe width="1000" height="569" src="https://www.youtube.com/embed/Hp4ZwLMvYfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! video
+    ![](https://www.youtube.com/embed/Hp4ZwLMvYfg)
 
 A linguagem VM possibilita o uso de funções, as funções são definidas em novos arquivos .vm na mesma pasta do arquivo Main.vm. Por exemplo :
 
 Na pasta do projeto `H-VM/src/vmExamples/SimpleFunction` possuímos duas funções: O `Main.vm` e a `SimpleFunction.vm`. A função main deve sempre deve existir no projeto, e será a primeira chamada na inicialização do sistema (assim como no python e C).
 
-Para definirmos uma função em VM basta criarmos um arquivo com a extensão `.vm` (que precisa ter o mesmo nome da função) que será como uma classe do nosso projeto, podendo conter mais que um método/função. 
+Para definirmos uma função em VM basta criarmos um arquivo com a extensão `.vm` (que precisa ter o mesmo nome da função) que será como uma classe do nosso projeto, podendo conter mais que um método/função.
 
 !!! note
-    Olhe o exemplo `src/vmExamples/StatiTest/` para ver como isso funciona.
+Olhe o exemplo `src/vmExamples/StatiTest/` para ver como isso funciona.
 
 Uma função é definida pela seguinte estrutura :
 
-- **function** *functionName* *numberOfVars*
+- **function** _functionName_ _numberOfVars_
 
 Onde :
 
 - **function:** é uma palavra reservado (keyword) para definir funções
 - **functionName:** é o nome da função
 - **numberOfVars:** a quantidade de variáveis locais que essa função possui.
-    
+
 Como exemplo, vamos transformar a seguinte função em Python para VM:
 
 ```python
@@ -50,22 +51,22 @@ function SimpleFunction 2
 
 Essa função possui duas variáveis locais, que pode ser acessada pelo segmento **local**, os parâmetros passados para a função (a e b) são acessíveis pelo segmento **argument** :
 
-- **push argument 0** 
+- **push argument 0**
 
       - acessa o primeiro argumento da função ( **a** ), trazendo o dado para a pilha.
-      
-- **push argument 1** 
+
+- **push argument 1**
 
       - acessa o primeiro argumento da função ( **b** ), trazendo o dado para a pilha.
-      
-- **push/pop temp 0** 
+
+- **push/pop temp 0**
 
       - acessa ou grava na primeiro variável local da função ( **aux0** ).
-      
-- **push/pop temp 1** 
+
+- **push/pop temp 1**
 
       - acessa ou grava na primeiro variável local da função ( **aux1** ).
-      
+
 Note que os parâmetros devem ser apenas leitura, não devendo escrever nesses segmentos.
 
 ## return
@@ -78,13 +79,13 @@ A chamada de função ocorre na própria pilha, para isso é necessário colocar
 
 ```
      a
-     b 
+     b
 SP->
 ```
 
 e em seguida fazer a chamada de função que possui a seguinte estrutura:
 
-- **call** *functionName* *numberOfParameters* 
+- **call** _functionName_ _numberOfParameters_
 
 Onde :
 
@@ -103,4 +104,4 @@ function Main.main 0
 
 ## Graficamente
 
-![](figs/I-VM/function.svg)
+![](../figs/vm/function.svg)

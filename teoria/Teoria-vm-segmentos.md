@@ -51,7 +51,7 @@ Para atualizarmos o LCD via VM será necessário primeiro atualizarmos para onde
 
 Nesse pequeno código em C o que está acontecendo é que primeiramente definimos um ponteiro pLCD que aponta para 16384, depois fazemos com que o endereço desse ponteiro + 1200 receba 0xFFFF, o mesmo código em VM é realizado da seguinte maneira :
 
-![exemplo that atualizando LCD](figs/I-VM/that.svg)
+![exemplo that atualizando LCD](../figs/vm/that.svg)
 
 
 ```
