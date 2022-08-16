@@ -15,21 +15,21 @@
 |                  | [Why Do Computers Use 1s and 0s? Binary and Transistors Explained.](https://www.youtube.com/watch?v=Xpk67YzOn5w)     |
 
 !!! info "Primeiras Máquinas de Calcular"
-Wilhelm Schickard (1592–1635) construiu em 1623 uma calculadora para seu amigo astrônomo Johannes Kepler. Esta é a mais antiga calculadora mecânica conhecida de quatro funções, que foi descoberta por esboços da sua criação.
+    Wilhelm Schickard (1592–1635) construiu em 1623 uma calculadora para seu amigo astrônomo Johannes Kepler. Esta é a mais antiga calculadora mecânica conhecida de quatro funções, que foi descoberta por esboços da sua criação.
 
     ![](http://people.idsia.ch/~juergen/schickardcomputer178e.jpg){width=200}
 
     > Fonte: http://people.idsia.ch/~juergen/schickard.html
 
 !!! info "História"
-Blaise Pascal (1623-1662) inventou e produziu em 1642 a Pascaline. Ela só podia fazer adição e subtração, manipulando os números inscritos em seus mostradores. Ele construiu 50 deles ao longo de 10 anos, embora só tenha vendido 15.
+    Blaise Pascal (1623-1662) inventou e produziu em 1642 a Pascaline. Ela só podia fazer adição e subtração, manipulando os números inscritos em seus mostradores. Ele construiu 50 deles ao longo de 10 anos, embora só tenha vendido 15.
 
     ![](https://images.computerhistory.org/revonline/images/500004213-03-01.jpg?w=600){width=200}
 
     > Fonte: http://www.computerhistory.org/revolution/calculators/1/47
 
 !!! info "Primeiras Máquinas de Calcular"
-Gottfried Wilhelm von Leibniz (1646-1716) é creditado como um dos inventores do cálculo diferencial e integral. Porém, foi o primeiro a documentar e estudar profundamente o sistema binário de numeração (base 2). Em 1672 Leibniz começou a inventar uma máquina capaz de fazer as 4 operações aritméticas, o Staffelwalze.
+    Gottfried Wilhelm von Leibniz (1646-1716) é creditado como um dos inventores do cálculo diferencial e integral. Porém, foi o primeiro a documentar e estudar profundamente o sistema binário de numeração (base 2). Em 1672 Leibniz começou a inventar uma máquina capaz de fazer as 4 operações aritméticas, o Staffelwalze.
 
       ![](https://images.computerhistory.org/revonline/images/102630768-03-01.jpg?w=600){width=300}
 
@@ -42,7 +42,7 @@ O sistema decimal é o mais utilizado pelas civilizações modernas, nele utiliz
 ![](./figs/Teoria/Dados-decimal.svg){width=400}
 
 !!! info "Algarismos indo-arábicos"
-O sistema de numeração hindu como a conhecemos hoje, pode ser atribuído a dois homens: o astrônomo Ariabata (आर्यभट) e seu pupilo Bhāskara I, durante 499-522 ac. Eles inventaram um sistema que se baseia na utilização da combinação de sílabas para formar os números, em um sistema incluindo a notação do zero.
+    O sistema de numeração hindu como a conhecemos hoje, pode ser atribuído a dois homens: o astrônomo Ariabata (आर्यभट) e seu pupilo Bhāskara I, durante 499-522 ac. Eles inventaram um sistema que se baseia na utilização da combinação de sílabas para formar os números, em um sistema incluindo a notação do zero.
 
     ![](https://cdn.britannica.com/60/91960-004-42DF23AB.gif)
 
@@ -55,7 +55,7 @@ No sistema de base 2 possuímos apenas duas opções de símbolo: `0` e `1`. Nes
 ![](./figs/Dados-binario.svg){width=500}
 
 !!! video
-![](https://www.youtube.com/embed/7_t6IUJkJ1E)
+    ![](https://www.youtube.com/embed/7_t6IUJkJ1E)
 
 Dessa maneira podemos construir o valor que desejarmos de decimal ($m$) em binário, para isso será necessário ocupar $ceil(log2(m))$ bits para armazenar o valor. A tabela a seguir ilustra algumas situações:
 
@@ -82,28 +82,29 @@ Supondo que possuímos um binário de três dígitos, um contador de `0` a `7` e
 | `1` | `0` | `1` | `1` | `0` | `1` | número binário |
 
 !!! tip
-Não tem muito segredo, para interpretar números binários facilmente é necessária prática!
+    Não tem muito segredo, para interpretar números binários facilmente é necessária prática!
 
 !!! tip
-Para saber qual o valor máximo de decimal que é possível armazenar com $n$ bits:
+    Para saber qual o valor máximo de decimal que é possível armazenar com $n$ bits:
 
     $0  ..  2^n-1$
 
 !!! note "Nomenclatura"
-Iremos utilizar os prefixos:
+    Iremos utilizar os prefixos:
 
     - ` `: Para indicar um número em decimal
     - `0b`: Para indicar um número em binário
     - `0x`: Para indicar um número em hexadecimal
 
     Exemplo:
+    
     ```
     hex      bin      dec
     0x100 != 0b100 != 100
-      ```
+    ```
 
 !!! exercise choice two-cols "Base 2"
-Converta `15` de decimal para base 2 (binário)
+    Converta `15` de decimal para base 2 (binário)
 
     - [ ] `0015`
     - [x] `1111`
@@ -130,21 +131,21 @@ Em muitas linguagens de programação é necessário definirmos o tamanho da var
 Existem diversas técnicas de conversão binário :arrows_counterclockwise: decimal, a seguir detalhes de como realizar essas conversões, o segredo é entender os pesos de cada casa de um `bit` no sistema binário e então fazer a conta inversa.
 
 !!! video
-![](https://www.youtube.com/embed/_68Cn5VuDxQ)
+    ![](https://www.youtube.com/embed/_68Cn5VuDxQ)
 
 !!! video
-![](https://www.youtube.com/embed/gOXO5H4i18Y)
+    ![](https://www.youtube.com/embed/gOXO5H4i18Y)
 
 ## Base 16
 
 !!! video
-![](https://www.youtube.com/embed/uuUzkqSxCz4)
+    ![](https://www.youtube.com/embed/uuUzkqSxCz4)
 
 A base 16, ou hexadecimal, é outra maneira de representarmos números utilizando não só `2` ou `10` símbolos como acabamos de ver, mas 16 símbolos! É como se conseguimos representar o valor `10` com um único carácter, no caso iremos utilizar o `A`.
 
 Nessa base, cada unidade possui um peso na forma $2^{16}$:
 
-![](./figs/Teoria/Dados-hexa.svg){width=500}
+![](./figs/Dados-hexa.svg){width=500}
 
 Um contador no formato hexadecimal possui a seguinte forma:
 
@@ -171,33 +172,33 @@ Um contador no formato hexadecimal possui a seguinte forma:
 ### Base 16 <--> Base 2
 
 !!! video
-![](https://www.youtube.com/embed/SU0HpCAkIxY)
+    ![](https://www.youtube.com/embed/SU0HpCAkIxY)
 
 A conversão de número na base 16 para a base 2 e vice-versa acontece de forma trivial. Da base 2 para a base 16 basta separar os bits da palavra em unidades de 4 casas e então realizar a conversão de cada grupo de 4 bits para o seu equivalente em Hexa. Para a conversão de hexa para binário, basta converter cada símbolo de hexa para o seu equivalente em binário (4 dígitos), seguindo a tabela anterior.
 
 Exemplos:
 
-a) 0xA01 para binário:
+a) `0xA01` para binário:
 
-```
+
       A   0    1
       |    \    \
       |     \    \
      1010   0000  0001
 
      -> 0b1010_0000_0001
-```
+
 
 b) `0b1111_0101_1000` para hexa:
 
-```
+
      1111 0101 1000
       |    |    |
       |    |    |
       F    5    8
 
       -> 0xF58
-```
+
 
 ### Base 16 <--> Base 10
 
@@ -207,14 +208,12 @@ Para converter de Hexa para Decimal basta aplicar os pesos em cada um das unidad
 
 a) 0xA01 para decimal:
 
-```
-    A       0       1
-    |       |       |
-    |       |       |
-  A.16^2  0.16^1   1.16^0
+        A       0       1
+        |       |       |
+        |       |       |
+    A.16^2  0.16^1   1.16^0
 
    -> 10.256 + 0.16 + 1.1 = 2561
-```
 
 Para alterar a base de Decimal para Hexa, uma das soluções mais triviais é a de converter primeiro para binário e então agrupar os bits de 4 em 4 e converter para hexa:
 
@@ -224,19 +223,17 @@ Para alterar a base de Decimal para Hexa, uma das soluções mais triviais é a 
 
 b) 42 -> 0x ???
 
-```
-    32 +  8 +  2 = 42
-      \   |   /     ---------------
-       \  |  /      |             |
-        \ | /       |             v
-42 -> 0b101010 -> 0010 1010 -> 0x2A
-                         |        ^
-                         |        |
-                         ----------
-                  ----|----
-                      |
-                Blocos de 4 bits
-```
+         32 +  8 +  2 = 42
+          \   |   /     ---------------
+           \  |  /      |             |
+            \ | /       |             v
+    42 -> 0b101010 -> 0010 1010 -> 0x2A
+                            |        ^
+                            |        |
+                            ----------
+                    ----|----
+                        |
+                    Blocos de 4 bits
 
 ## Base 8
 
@@ -274,14 +271,12 @@ O sistema octal é utilizado no Linux para permissões de arquivos onde são nec
 
 Para modificar a permissão de um arquivo no linux é necessário fornecer a informação para três grupos diferentes: `usuário`, grupos na qual o usuário faz parte e qualquer outro user. Para isso basta escrever no terminal:
 
-```
-            / others
-           /
-$ chmod 754 FILE
-        | \
-        |  \ group
-        user
-```
+                / others
+            /
+    $ chmod 754 FILE
+            | \
+            |  \ group
+            user
 
 Isso da permissão de:
 
@@ -290,12 +285,12 @@ Isso da permissão de:
 - others: read
 
 !!! tip "Povos"
-Alguns povos da América do Norte, México e Europa utilizam o sistema octal, pois consideram a quantidade dos vãos dos dedos e não os dedos propriamente.
+    Alguns povos da América do Norte, México e Europa utilizam o sistema octal, pois consideram a quantidade dos vãos dos dedos e não os dedos propriamente.
 
     > Fonte: https://en.wikipedia.org/wiki/Octal#By_Native_Americans
 
 !!! tip "Início da computação"
-Para que serve o sistema octal? No começo da computação a IBM possuía memórias com: 6-bit, 12-bit, 24-bit e 36-bit. Sendo todas as unidades divisíveis por 3, o que facilita a interpretação em um sistema octal.
+    Para que serve o sistema octal? No começo da computação a IBM possuía memórias com: 6-bit, 12-bit, 24-bit e 36-bit. Sendo todas as unidades divisíveis por 3, o que facilita a interpretação em um sistema octal.
 
 ## Outros sistemas
 
@@ -311,25 +306,23 @@ No sistema [Binary-coded decimal (BCD)](https://pt.wikipedia.org/wiki/Codifica%C
 
 - Exemplo, `356` em BCD:
 
-```
-  3   5    6    : Decimal
-0011 0101 0110  : BCD
-```
+    3   5    6    : Decimal
+    0011 0101 0110  : BCD
 
 !!! video
-![](https://www.youtube.com/embed/AM0tr8Kyvzg)
+    ![](https://www.youtube.com/embed/AM0tr8Kyvzg)
 
 ### ASCII
 
 [ASCII](https://pt.wikipedia.org/wiki/ASCII) (do inglês American Standard Code for Information Interchange; "Código Padrão Americano para o Intercâmbio de Informação") é uma maneira de codificar em binário (8 bits) 95 sinais gráficos (letras, símbolos e números) e alguns sinais de controle. É muito utilizada pelos programas para armazenarem 'caracteres' e 'strings'.
 
-[![](http://www.asciitable.com/index/asciifull.gif)](http://www.asciitable.com)
+[![](https://www.asciitable.com/asciifull.gif)](http://www.asciitable.com)
 
 > Fonte: www.asciitable.com
 
 Por exemplo, a palavra Insper convertido para ASCII fica da seguinte maneira (em decimal):
 
-![](./figs/Teoria/Dados-ascii.svg){width=500}
+![](./figs/Dados-ascii.svg){width=500}
 
 !!! video
-![](https://www.youtube.com/embed/zB85kTs-sEw)
+    ![](https://www.youtube.com/embed/zB85kTs-sEw)
