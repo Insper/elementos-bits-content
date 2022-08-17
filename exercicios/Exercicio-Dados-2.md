@@ -1,6 +1,6 @@
 # Dados Digitais - 2
 
-[![](figs/pdf.png){width=25} Versão para impressão.](https://github.com/Insper/Z01.1/blob/main/Exercicio-Dados-2.pdf)
+Exercícios pr
 
 ## Memória 1
 
