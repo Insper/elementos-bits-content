@@ -242,7 +242,7 @@ Similar as outras bases de número, o sistema octal é composto por 8 símbolos:
 a) 137 em octal para decimal: $1.8^2 + 3.8^1 + 7.8^0=95$
 
 | 2     | 1    | 0    | posição                    |
-| ----- | ---- | ---- | -------------------------- |
+|-------|------|------|----------------------------|
 | 8^2   | 8^1  | 8^0  | peso                       |
 | 64    | 8    | 1    | peso                       |
 | `1`   | `3`  | `7`  | valor octal                |
@@ -253,7 +253,7 @@ Para representarmos um valor octal em binário, é necessário reservarmos 3 bit
 b) 137 para binário:
 
 ```
- 001 011 111
+001 011 111
 ```
 
 O sistema octal é utilizado no Linux para permissões de arquivos onde são necessários 3 bits para controlar se um usuário possui: acesso de leitura, escrita e/ou execução de um determinado arquivo:
@@ -271,12 +271,14 @@ O sistema octal é utilizado no Linux para permissões de arquivos onde são nec
 
 Para modificar a permissão de um arquivo no linux é necessário fornecer a informação para três grupos diferentes: `usuário`, grupos na qual o usuário faz parte e qualquer outro user. Para isso basta escrever no terminal:
 
-                / others
-            /
-    $ chmod 754 FILE
-            | \
-            |  \ group
-            user
+```
+         / others
+        /
+$chmod 754 FILE
+        | \
+        |  \ group
+        user
+```
 
 Isso da permissão de:
 
@@ -306,8 +308,10 @@ No sistema [Binary-coded decimal (BCD)](https://pt.wikipedia.org/wiki/Codifica%C
 
 - Exemplo, `356` em BCD:
 
-    3   5    6    : Decimal
+```
+     3    5    6    : Decimal
     0011 0101 0110  : BCD
+```
 
 !!! video
     ![](https://www.youtube.com/embed/AM0tr8Kyvzg)
