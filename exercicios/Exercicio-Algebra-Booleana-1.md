@@ -1,7 +1,7 @@
 # Álgebra Booleana - 1
 
 !!! tip ""
-    [:pencil: Resolução](https://github.com/Insper/Z01.1/blob/master/Exercicio-Algebra-Booleana-1-resolucao.pdf)
+    [:pencil: Resolução](https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Exercicio-Algebra-Booleana-1-resolucao.pdf)
 
 
 !!! exercise text short
