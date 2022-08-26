@@ -1,9 +1,9 @@
 # Álgebra Booleana - 2
 
-[![](figs/pdf.png){width=25} Versão para impressão.](https://github.com/Insper/Z01.1/raw/main/Exercicio-Algebra-Booleana-2.pdf) 
+[:file_folder: Versão para impressão.](https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Exercicio-Algebra-Booleana-2.pdf)
 
 !!! tip ""
-    [:pencil: Resolução](https://github.com/Insper/Z01.1/blob/master/Exercicio-Algebra-Booleana-2-resolucao.pdf)
+    [:pencil: Resolução](https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Exercicio-Algebra-Booleana-2-resolucao.pdf)
 
 !!! exercise 
     Dado o circuito a seguir:

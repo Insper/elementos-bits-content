@@ -1,6 +1,6 @@
 # Dados Digitais - 2
 
-Exercícios pr
+[:pencil: Resolução](https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Exercicio-Dados-2_resolucao.pdf)
 
 ## Memória 1
 
