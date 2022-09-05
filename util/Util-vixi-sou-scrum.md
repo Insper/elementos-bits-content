@@ -1,46 +1,59 @@
-# Vixi! Sou scrum master
+# Vixi! Sou desenvolvedor 
 
-[![](https://imgs.xkcd.com/comics/estimating_time.png)](https://xkcd.com/1658/)
+![](https://imgs.xkcd.com/comics/compiling.png)
 
 !!! tip "Passos"
-    Você é o mediador (Scrum Master) do projeto e não sabe por onde começar? A seguir os passos que devem ser realizados!
+    Você é desenvolvedor do projeto e não sabe por onde começar? A seguir os passos que devem ser realizados!
 
-    1. [Sincronizar repositório com upstream](../Util-Comecando-novo-projeto/#antes-de-comecar-mediador)
+    1. Aguarde o scrum sincronizar o repositório com o upstream e então atualize o seu repositório local: `git pull origin main`
 
-    2. Editar `SCRUM_MASTER.json` com suas informações
+    2. Ler documentação do projeto
 
-    3. Ler documentação do projeto
+    3. Junto com o scrum defina as tarefas que você quer fazer, elas vão virar issues no github.
 
-    4. Configurar GH-Actions para executar teste do projeto
+    4. Para cada tarefa sua você deve:
+    
+        - Criar uma branch
+        - Configurar o github actions para executar teste do projeto 
+        - Implemente e teste o módulo
+        - Enviar branch para github
+        - Criar pull-request
+    
+    5. Acompanhe o desenvolvimento do projeto pelo seus colegas, não faca apenas a sua parte!
 
-    5. Criar Project e issues no github (detalhes ao final dessa página)
-        - Discuta com os seus colegas
+    6. Na data da entrega preencha o formulário que vai estar na página do projeto.
+    
+## Comandos
 
-    7. Acompanhe o grupo ajudando o pessoal trabalhar, **seu papel é entregar!! e no prazo!!!** 
+Criando uma branch:
 
-    8. Na entrega do projeto, todos os issues devem ter sido resolvidos (e arquivados). Todos as tarefas devem ser movidas para `done` no projects.
+```
+git checkout -B NAME main
+```
 
-    **Com o projeto finalizado:**
+- NAME: escolha um nome que faca sentido.
+- Lembre de criar o branch sempre do main, por isso que temos um `main` no final do comando
 
-    9. Criar uma tag no git para marcar o commit que tudo funciona, exemplo: `git tag Projeto-C` + `git push --tag`
+----------------------
 
-    10. Preencher formulário de relatório (página de projeto)
+Enviando uma branch para o github:
 
-## Criar project no github
+```bash
+git push origin NAME
+```
 
-- Criando um project no github
+----------------------
 
-![](figs/C-2-project.gif)
+Adicionado teste no CI:
 
-- Adicionando issues
+``` yml title=".github/workflows/componentes.yml"
+    - name: Test MODULO
+      run: |
+        pytest hw/test_components.py -k MODULO
+```
 
-!!! tip
-    Os issues devem ser todos os módulos a serem implementados do projeto.
+- MODULO: Nome do modulo que está implementando.
 
-![](figs/C-3-issues.gif)
+----------------------
 
-- Você deve manter o quadro atualizado.
-
-
-
-
+Criando PR:
