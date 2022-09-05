@@ -7,27 +7,6 @@
 
 Você deve fazer a secção do seu papel: Mediador/ Desenvolvedor
 
-## Atualizando infra
-
-!!! warning
-    Todos devem realizar essa etapa: Mediadores e Desenvolvedores
-
-Atualizar a infra da disciplina executando o comando a seguir na pasta raiz ro repositório:
-
-=== "Elementos"
-
-    ```bash
-    $ ./updateZ01tools.sh
-    ```
-
-    Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
-
-=== "Bits e Proc"
-    `pip3 install "bits-e-proc"`
-    
-    Irá instalar a lib python que possui a infra de testes da disciplina.
-
-
 ## Antes de começar - Mediador
 
 !!! note "Mediador"
@@ -48,9 +27,10 @@ No terminal:
     ``` bash
     $ git remote add upstream https://github.com/insper/Z01.1
     ```
+    
 === "Bits e Proc"
     ``` bash
-    $ git remote add upstream git@github.com:Insper/bits-e-proc.git
+    $ git remote add upstream git@github.com:Insper/bits-e-proc-proj.git
     ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:
@@ -67,6 +47,7 @@ Novos arquivos devem ter aparecido no repositório, para saber quais:
 $ git diff HEAD~ --name-only
 ```
 
+
 ### Actions
 
 !!! tip "Arquivos ocultos"
@@ -80,41 +61,60 @@ Edite o arquivo `actions.yml` localizado na pasta `.github/workflows/` modifican
 
 === "Elementos"
     ``` yml
-            python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
-            python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
-            python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
+    python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
+    python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
+    python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
     ```
+    
 === "Bits e Proc"
-    TODO
+    Cada entrega terá um arquivo de configuracão, no caso do primeiro projeto ele já está 
+    configurado, mas de uma olhada no arquivo: `.github/workflows/componentes.yml`.
+    
+    ``` yml
+      - name: Combinacional
+        run: |
+        pytest hw/test_components.py
+    ```
+
 
 Agora vamos realizar um commit e submeter aos demais colegas do grupo as alterações:
 
 ```bash
-$ git add .github/workflows/actions.yml
-$ git commit -m "configurando actions para novo projeto"
+$ git add .github/
+$ git commit -m "configurando repo para novo projeto"
 ```
 
-### `SCRUM_MASTER.json`
+## Atualizando infra
 
-O mediador do projeto deve editar o arquivo `SCRUM_MASTER.json` localizado na pasta do projeto (no caso do projeto B: `Projetos/B-LogicaCombinacional/SCRUM_MASTER.json`) com os seus dados.
+!!! warning
+    Todos devem realizar essa etapa: Mediadores e Desenvolvedores
 
-Após editar esse arquivo deve realizar um commit e fazer o envio para o github:
+Atualizar a infra da disciplina executando o comando a seguir na pasta raiz ro repositório:
 
-```bash
-$ git commit -am "configurado scrum do projeto"
-$ git push origin main
-```
+=== "Elementos"
 
-!!! note
-    Isso é importante pois os professores irão usar esse arquivo para saber quem são os mediadores de cada projeto.
+    ```bash
+    $ ./updateZ01tools.sh
+    ```
 
-### Atualizar tools
+    Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
 
-Você deve atualizar os scripts de teste, executando o comando a seguir:
+=== "Bits e Proc"
+    Install:
+    
+    ```
+    pip install -r requirements.txt
+    pip install pip-upgrader
+    ```
+    
+    E execute:
+    
+    ```
+    pip-upgrade requirements.txt
+    ```
+    
+    Irá instalar / atualizar a lib python que possui a infra de testes da disciplina.
 
-```bash
-$ ./updateZ01tools.sh
-```
 
 ## Antes de começar - Desenvolvedores
 
@@ -133,4 +133,3 @@ Agora todos os integrantes do grupo devem atualizar o repositório local:
 ```
 $ git pull origin main
 ```
-
