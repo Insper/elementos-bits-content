@@ -138,11 +138,11 @@ O FF tipo D possui as seguintes portas:
 - $\bar{Q}$ saída do dado copiado
 - $CLK$ entrada do clock
 
-![](.figs/Logica-Sequencial-FF-D.svg){width=300}
+![](figs/Logica-Sequencial-FF-D.svg){width=300}
 
 Toda vez que o ocorre uma borda de subina no `clock`, o sinal que está na entrada `D` é copiado para a saída `Q`, conforme diagrama a seguir:
 
-![](.figs/Logica-Sequencial-FF-D-time.svg){width=500}
+![](figs/Logica-Sequencial-FF-D-time.svg){width=500}
 
 A tabela verdade desse componente é representada da seguinte maneira:
 
