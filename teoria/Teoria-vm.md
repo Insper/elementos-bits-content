@@ -3,6 +3,9 @@
 !!! video
     ![](https://www.youtube.com/embed/U9DRGBVp8Eg)
 
+!!! progress
+    Não siga antes de assistir o vídeo
+
 A linguagem VM proposta para o curso é baseada em pilha (assim como tantas outras), as operações nesse nível não lidam mais com registradores do computador porém com dados que são colocados e tirados de uma pilha (`stack`). Uma grande vantagem disso é a abstração do hardware, agora não precisamos mais nos preocuparmos com a manipulação dos dados em baixo nível e saber por exemplo quantos registradores possuímos (o VMTranslator será encarregado disso). Um código escrito em VM passa pelas seguintes etapas antes de ser executado em máquina :
 
 ```
@@ -58,11 +61,6 @@ Temos diversas vantagens quando programamos em linguagem virtual:
       push local 0
       return
     ```
-    
-!!! tip 
-    Temos muitos outros exemplos na pasta:
-    
-    - `H-VM/src/examples/`
 
 ## Pilha
 
@@ -83,8 +81,6 @@ pop temp 0
 ```
 
 Esse código carrega as constantes 3 e 7 para a pilha e faz soma deles, o resultado é guardado no endereço de temp 0.
-
-!!! info "Notaçào 
 
 ![Stack](../figs/vm/Stack.svg)
 

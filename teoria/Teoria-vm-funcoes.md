@@ -9,9 +9,6 @@ Na pasta do projeto `H-VM/src/vmExamples/SimpleFunction` possuímos duas funçõ
 
 Para definirmos uma função em VM basta criarmos um arquivo com a extensão `.vm` (que precisa ter o mesmo nome da função) que será como uma classe do nosso projeto, podendo conter mais que um método/função.
 
-!!! note
-Olhe o exemplo `src/vmExamples/StatiTest/` para ver como isso funciona.
-
 Uma função é definida pela seguinte estrutura :
 
 - **function** _functionName_ _numberOfVars_
@@ -67,7 +64,7 @@ Essa função possui duas variáveis locais, que pode ser acessada pelo segmento
 
       - acessa ou grava na primeiro variável local da função ( **aux1** ).
 
-Note que os parâmetros devem ser apenas leitura, não devendo escrever nesses segmentos.
+==Note que os parâmetros devem ser apenas leitura, não devendo escrever nesses segmentos.==
 
 ## return
 
