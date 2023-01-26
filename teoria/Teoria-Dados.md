@@ -272,12 +272,12 @@ O sistema octal é utilizado no Linux para permissões de arquivos onde são nec
 Para modificar a permissão de um arquivo no linux é necessário fornecer a informação para três grupos diferentes: `usuário`, grupos na qual o usuário faz parte e qualquer outro user. Para isso basta escrever no terminal:
 
 ```
-         / others
+         / user
         /
 $chmod 754 FILE
         | \
-        |  \ group
-        user
+        |  \ others
+        group
 ```
 
 Isso da permissão de:
