@@ -259,13 +259,16 @@ Nessa tabela criamos colunas para cada variável de entrada e de saída e coloca
 
     !!! answer
         2^4 = 16
-        
+    
+
+![](figs/AlgebraBoolena-quiz1a.png){width=440}
+    
 !!! exercise choice
     ﻿Qual tabela verdade a seguir foi montada correta?
     
-    - [ ] ![](./figs/AlgebraBoolena-quiz1a.png){width=440}
-    - [ ] ![](./figs/AlgebraBoolena-quiz1b.png){width=440}
-    - [x] ![](./figs/AlgebraBoolena-quiz1c.png){width=440}
+    - [ ] ![](../figs/AlgebraBoolena-quiz1a.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz1b.png)
+    - [x] ![](../figs/AlgebraBoolena-quiz1c.png)
     
     !!! answer
         .
@@ -489,27 +492,18 @@ Como seria mais lógico (já que em binário: `00 = 0; 01 = 1; 10 = 2; 11 = 3`).
 !!! exercise choice two-cols
     Qual mapa de K. foi montado certo?
     
-    - [ ] ![](./figs/AlgebraBoolena-quiz7a.png){width=120}
-    - [ ] ![](./figs/AlgebraBoolena-quiz7b.png){width=120}
-    - [x] ![](./figs/AlgebraBoolena-quiz7c.png){width=120}
-    - [ ] ![](./figs/AlgebraBoolena-quiz7d.png){width=120}
-
-    !!! answer
-        .
-        
+    - [ ] ![](../figs/AlgebraBoolena-quiz7a.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz7b.png)
+    - [x] ![](../figs/AlgebraBoolena-quiz7c.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz7d.png)
+    
 !!! exercise choice two-cols
     Qual mapa de K. foi montado certo?
     
-    - [x] ![](./figs/AlgebraBoolena-quiz8a.png){width=120}
-    - [ ] ![](./figs/AlgebraBoolena-quiz8b.png){width=120}
-    - [ ] ![](./figs/AlgebraBoolena-quiz8c.png){width=120}
-    - [ ] ![](./figs/AlgebraBoolena-quiz8d.png){width=120}
-
-    !!! answer
-        .
-    
-!!! progress 
-    Cheguei Aqui!
+    - [x] ![](../figs/AlgebraBoolena-quiz8a.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz8b.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz8c.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz8d.png)
 
 #### 3. Grupos
 
@@ -589,27 +583,18 @@ Podemos pensar no MK **não como sendo uma tabela plana**, mas sim uma superfíc
 !!! exercise choice two-cols
     Qual agrupamento é o mais correto?
     
-    - [ ] ![](./figs/AlgebraBoolena-quiz9a.png){width=180}
-    - [x] ![](./figs/AlgebraBoolena-quiz9b.png){width=180}
-    - [ ] ![](./figs/AlgebraBoolena-quiz9c.png){width=180}
-    - [ ] ![](./figs/AlgebraBoolena-quiz9d.png){width=180}
+    - [ ] ![](../figs/AlgebraBoolena-quiz9a.png)
+    - [x] ![](../figs/AlgebraBoolena-quiz9b.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz9c.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz9d.png)
 
-    !!! answer
-        .
-  
 !!! exercise choice two-cols
     Qual agrupamento é o mais correto?
     
-    - [ ] ![](./figs/AlgebraBoolena-quiz10a.png){width=180}
-    - [ ] ![](./figs/AlgebraBoolena-quiz10b.png){width=180}
-    - [x] ![](./figs/AlgebraBoolena-quiz10c.png){width=180}
-    - [ ] ![](./figs/AlgebraBoolena-quiz10d.png){width=180}
-
-    !!! answer
-        .
-     
-!!! progress 
-    Cheguei Aqui!
+    - [ ] ![](../figs/AlgebraBoolena-quiz10a.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz10b.png)
+    - [x] ![](../figs/AlgebraBoolena-quiz10c.png)
+    - [ ] ![](../figs/AlgebraBoolena-quiz10d.png)
 
 #### 4. Gerando as equações
 
