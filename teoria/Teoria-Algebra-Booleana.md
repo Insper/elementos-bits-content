@@ -332,8 +332,8 @@ Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em 
     
     ![](./figs/AlgebraBoolena-quiz3a.png){width=150}
     
-    - [x] Soma dos produtos: `(...) + (...) + `
-    - [ ] Produto das somas: `(+++) . (+++) . `
+    - [ ] Soma dos produtos: `(...) + (...) + `
+    - [x] Produto das somas: `(+++) . (+++) . `
 
     !!! answer
         .
@@ -343,8 +343,8 @@ Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em 
     
     ![](./figs/AlgebraBoolena-quiz4a.png){width=150}
     
-    - [ ] Soma dos produtos: `(...) + (...) + `
-    - [x] Produto das somas: `(+++) . (+++) . `
+    - [x] Soma dos produtos: `(...) + (...) + `
+    - [ ] Produto das somas: `(+++) . (+++) . `
 
     !!! answer
         .
