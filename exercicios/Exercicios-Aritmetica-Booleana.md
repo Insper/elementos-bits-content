@@ -59,7 +59,7 @@ Assuma vetores de 8 bits, e codificação em complemento de dois. ==Realize os e
     
     !!! answer
         ```
-            0001 1010
+         1111 1111 0001 1010
         ```
 
 !!! exercise text short
