@@ -134,11 +134,11 @@ Assuma vetores de 8 bits, e codificação em complemento de dois. ==Realize os e
         ==Não temos bits suficiente para armazenar o valor da soma!==
     
         ```
-        1 1 1 1 1 1 1 1   (carry)
+        1 1 1 1 1 1 1 0   (carry)
           0 1 1 1 1 1 1 1
           0 1 1 0 0 0 1 0
           ------------------- 
-          1 1 1 0 0 0 1 0   (negativo com soma de dois números positivos???)
+          1 1 1 0 0 0 0 0   (negativo com soma de dois números positivos???)
         ```
 
 !!! exercise text short
