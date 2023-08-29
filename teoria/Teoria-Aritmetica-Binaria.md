@@ -248,6 +248,79 @@ Essa técnica de rotacionar vale para múltiplos de 2, se deseja multiplicar/div
     00000001 => 00000100
 ```
 
+## Multiplicação Binária (unsigned)
+
+!!! video
+    ![](https://www.youtube.com/watch?v=FeSdyNElWME)
+
+A multiplicação em binário segue o mesmo princípio que a multiplicação em decimal: vamos multiplicar cada bit do multiplicando com o multiplicador e somar os resultados.
+
+Vamos entender com um exemplo:
+
+### Exemplo
+
+Vamos multiplicar `101` (5 em decimal) por `11` (3 em decimal).
+
+```
+   101  (multiplicando)
+ x  11  (multiplicador)
+ _____
+   101  (101 multiplicado por 1 - a posição mais à direita do multiplicador)
+  101   (101 multiplicado por 1 - a segunda posição do multiplicador, deslocado para a esquerda)
+ ______
+  1111  (resultado)
+```
+
+Então, em binário, `101` multiplicado por `11` é igual a `1111`.
+
+### Passos
+
+1. Comece pela posição mais à direita (bit menos significativo) do multiplicador.
+2. Multiplique o multiplicando pelo bit do multiplicador.
+3. Anote o resultado.
+4. Desloque o multiplicando uma posição para a esquerda.
+5. Vá para o próximo bit à esquerda do multiplicador e repita os passos 2 a 4.
+6. Some todos os resultados intermediários.
+
+### Observações:
+
+- Multiplicar por 0 sempre resulta em 0.
+- Multiplicar por 1 é o mesmo que o próprio número.
+
+Ao realizar multiplicações maiores, a quantidade de etapas intermediárias aumentará, mas o princípio básico é o mesmo. E, assim como na multiplicação decimal, a prática leva à perfeição. Uma vez que você entende o processo básico, multiplicar números binários torna-se tão fácil quanto multiplicar números decimais.
+
+!!! exercise text short
+
+    Dado os números binários `1001` (9 em decimal) e `10111` (23 em decimal), realize a multiplicação binária e forneça o resultado.
+
+    !!! answer
+        ```
+             1001   (multiplicando)
+          x 10111   (multiplicador)
+         ________
+             1001
+            1001    
+        +  1001     
+          0000      
+         1001       
+         _________
+         11001111   (resultado)
+        ```
+
+## Multiplicação Binária (com sinal)
+
+> Informacões do site do [IF de Santa Catarina](https://wiki.sj.ifsc.edu.br/index.php/Multiplica%C3%A7%C3%A3o_Bin%C3%A1ria)
+
+A técnica é muito similar, só que temos que considerar a extensão dos bits quando ele é negativo:
+
+![](https://wiki.sj.ifsc.edu.br/images/f/f9/MultBin2.png)
+
+!!! warning 
+    No caso dos dois números negativos a regra é um pouco difente e não iremos tratar no curso.
+    
+    - [Booth's multiplication algorithm](https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm)
+    
+
 ## Ponto fixo 
 
 [Ponto fixo](https://ufsj.edu.br/portal2-repositorio/File/nepomuceno/compieee.pdf) é uma das técnicas de representação de números fracionados em binário, nessa notação fixasse quantos bits serão utilizados para a parte inteira e quantos serão utilizados para a fração. É aplicado o mesmo conceito dos números decimais, as casas a direita do ponto possuem peso na ordem `2^-n`.
