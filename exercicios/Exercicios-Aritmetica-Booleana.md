@@ -138,7 +138,7 @@ Assuma vetores de 8 bits, e codificação em complemento de dois. ==Realize os e
           0 1 1 1 1 1 1 1
           0 1 1 0 0 0 1 0
           ------------------- 
-          1 1 1 0 0 0 0 0   (negativo com soma de dois números positivos???)
+        1 0 1 1 0 0 0 0 1
         ```
 
 !!! exercise text short
