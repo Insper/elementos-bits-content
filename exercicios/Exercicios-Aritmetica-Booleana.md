@@ -23,7 +23,7 @@ Assuma vetores de 8 bits, e codificação em complemento de dois. ==Realize os e
     !!! answer
         | Decimal  | Complemento de dois   |
         |---|---|
-        | 3  | 0100  |
+        | 3  | 0011  |
         | 2  | 0010  |
         | 1  | 0001  |
         | 0  | 0000  |
