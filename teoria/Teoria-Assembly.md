@@ -19,3 +19,9 @@ ADD:                                  ; Label para saltar
 	  nop                           ; No-Operation
 	                                ; (necessário após jump)
 ```
+
+## Hardware
+
+A seguir uma animacão de como nosso hardware acessa memória:
+
+![](./figs/Z0-nasm-ram/1.gif)
