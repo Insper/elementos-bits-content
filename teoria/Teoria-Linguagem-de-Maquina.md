@@ -48,3 +48,7 @@ Instruções do tipo C são aquelas que computam alguma coisa (númerico ou lóg
 !!! example 
     - `addw %A, %D, %D`
     - `100000000100010000`
+
+# Para mais detalhes da conversão consulte
+
+![](../z01/figs/IS-Z011.svg)
