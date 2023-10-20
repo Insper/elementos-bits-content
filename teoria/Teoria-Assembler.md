@@ -103,15 +103,13 @@ Desenvolvemos no projeto E-Assembly uma série de programas escritos em nasm, ma
     $ java -jar ~/Z01-Tools/jar/Z01-Assembler.jar -i ./src/add.nasm -o /bin/add.hack
     ```
     
+    O programa em Java está dentro da pasta `Z01-Tools/jar` na raiz do usuário de vocês no linux. Esse programa em Java implementa o Assembler, e gera para cada nasm passado um executável.
+
+    
 === "BCC"
     ```bash
     $ ./bits.py assembler from-nasm sw/assembly/add.nasm add.hack
     ```
 
-
 !!! tip
     Experimente você rodar esse comando e ver o que ele gera de output.
-
-O programa em Java está dentro da pasta `Z01-Tools/jar` na raiz do usuário de vocês no linux. Esse programa em Java implementa o Assembler, e gera para cada nasm passado um executável.
-
-O script de teste não para por aí, ele precisa agora pegar esse executável, junto com os testes e jogar no Hardware, executar e pegar o resultado.
