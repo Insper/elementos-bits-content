@@ -197,3 +197,5 @@ O salto condicional utiliza o comparador que está dentro da nossa ULA para veri
 1. O `control Unit` verifica a condição do salto e os valores de `ng` e `zr`, se forem condizentes, faz `load_PC <= '1'` caso contrário, não salta `load_pc <= '0'` .
 
 ![](./figs/Z0-nasm-pc.svg)
+
+
