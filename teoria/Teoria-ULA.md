@@ -53,8 +53,8 @@ As operações suportadas pela ULA são (OUT):
 - `X+Y`: Soma as entradas X e Y
 - `X-Y`: Subtrai Y de X
 - `Y-X`: Subtrai X de Y
-- `Y&X`: Realiza a opera AND bit a bit de X com Y
-- `Y|X`: Realiza a opera or bit a bit de X com Y
+- `Y&X`: Realiza a operação AND bit a bit de X com Y
+- `Y|X`: Realiza a operação OR bit a bit de X com Y
 
 ### Controle
 
