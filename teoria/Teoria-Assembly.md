@@ -2,7 +2,7 @@
 
 Assembly é a linguagem de programação mais próxima do hardware, nela cada linha de código é traduzida diretamente para um linha do executável (código binário).
 
-Para mais informações sobre o assembly utilizado no curso acesse a página: [Z01 :arrow_right: Resumo Assembly](https://insper.github.io/Z01.1/Util-Resumo-Assembly/).
+Para mais informações sobre o assembly utilizado no curso acesse a página: [Z01 :arrow_right: Resumo Assembly](https://insper.github.io/bits-e-proc/commum-content/z01/z01-Resumo-Assembly/).
 
 Exemplo:
 
