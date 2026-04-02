@@ -25,7 +25,7 @@
 
 ## Instruções
 
-#### LEA - Carregamento Efetivo do Endereço (Valor)
+#### LEAW - Carregamento Efetivo do Endereço (Valor)
 
 !!! note ""
     **leaw** const, reg
@@ -43,16 +43,16 @@ leaw $15, %A
 
 ---------------------------------------
 
-#### MOV - Copia Valores
+#### MOVW - Copia Valores
 
 !!! note ""
     **movw** im*/reg/mem, reg/mem {, reg/mem, reg/mem}
 
 !!! tip "Dica"
-    A operação de mov faz na verde uma cópia, deixando a origem com o 
+    A operação de movw faz na verde uma cópia, deixando a origem com o 
     dado original.
 
- A instrução *mov,* copia o valor da primeira posição para
+ A instrução *movw* copia o valor da primeira posição para
 a segunda posição (terceira e quarta opcional).
 
 ```nasm
@@ -62,7 +62,7 @@ movw (%A), %D
 
 ---------------------------------------
 
-#### ADD - Adição de Inteiros
+#### ADDW - Adição de Inteiros
 
 !!! note ""
     **addw** reg/mem, reg/mem/im*, reg/mem {, reg/mem, reg/mem}
@@ -70,7 +70,7 @@ movw (%A), %D
 !!! tip "Dica"
     A operação permite salvar o resultado em mais de um destino.
 
- instrução add, soma o primeiro valor ao segundo
+ instrução *addw* soma o primeiro valor ao segundo
 valor e armazena o resultado no terceiro parâmetro (quarto e quinto
 opcional).
 
@@ -81,12 +81,12 @@ addw (%A), %D, %D
 
 ---------------------------------------
 
-#### SUB - Subtração de Inteiros
+#### SUBW - Subtração de Inteiros
 
 !!! note ""
      **subw** reg/mem, rem/mem/im*, reg/mem {, reg/mem, reg/mem}
 
- A instrução sub, subtrai o segundo valor do primeiro
+ A instrução *subw* subtrai o segundo valor do primeiro
 valor e armazena o resultado no terceiro parâmetro (quarto e quinto
 opcional).
 
@@ -97,12 +97,12 @@ subw %D, (%A), %A
 
 ---------------------------------------
 
-#### RSUB - Subtração de Inteiros Reversa
+#### RSUBW - Subtração de Inteiros Reversa
 
 !!! note ""
      **rsubw** reg/mem/im*, rem/mem, reg {, reg, reg}
 
- A instrução rsub, subtrai o segundo valor do primeiro
+ A instrução *rsub* subtrai o segundo valor do primeiro
 valor e armazena o resultado no terceiro parâmetro (quarto e quinto
 opcional).
 
@@ -114,7 +114,7 @@ rsubw %D, (%A), %A
 
 ---------------------------------------
 
-#### INC - Incrementa Inteiro
+#### INCW - Incrementa Inteiro
 
 !!! note ""
      **incw** reg
@@ -132,7 +132,7 @@ rsubw %D, (%A), %A
     addw $1, %A, %D 
     ```
 
- A instrução *inc,* adiciona um (1) ao valor do
+ A instrução *incw* adiciona um (1) ao valor do
 registrador ou memória.
 
 
@@ -143,12 +143,12 @@ incw %D
 
 ---------------------------------------
 
-#### DEC - Decrementa Inteiro
+#### DECW - Decrementa Inteiro
 
 !!! note ""
      **decw** reg
  
-A instrução *dec,* subtrai um (1) do valor do registrador
+A instrução *decw* subtrai um (1) do valor do registrador
 ou memória.
 
 ```nasm
@@ -158,13 +158,13 @@ decw %A
 
 ---------------------------------------
 
-#### NOT - Negação por Complemento de Um
+#### NOTW - Negação por Complemento de Um
 
 !!! note ""
     **notw** reg
     
-A instrução *not,* inverte o valor de cada bit do reg origem, ou seja,
-se um bit tem valor 0 fica com 1 e vice-versa.
+A instrução *not* inverte o valor de cada bit do reg origem, ou seja,
+se um bit tem valor 0010 fica com 1101 e vice-versa.
 
 ```nasm
 ; Exemplo:  D = !D
@@ -173,13 +173,13 @@ notw %D
 
 ---------------------------------------
 
-#### NEG - Negação por Complemento de dois
+#### NEGW - Negação por Complemento de dois
 
 !!! note ""
      negw reg
 
- A instrução *neg,* faz o valor ficar negativo, ou seja,
-um valor de x é modificado para -x.
+ A instrução *neg* faz o valor ficar negativo, ou seja,
+um valor de x é modificado para -x, ou, -x para x.
 
 
 ```nasm
@@ -189,7 +189,7 @@ um valor de x é modificado para -x.
 
 ---------------------------------------
 
-#### AND - Operador E (and)
+#### ANDW - Operador E (and)
 
 !!! note ""
      andw reg/mem, rem/mem
@@ -203,7 +203,7 @@ andw %A, %D, %D
 
 ---------------------------------------
 
-#### OR - Operador OU (or)
+#### ORW - Operador OU (or)
 
 !!! note ""
     orw reg/mem, rem/mem
@@ -232,14 +232,13 @@ jmp
 
 ---------------------------------------
 
-#### JE - Desvia Execução se Igual a Zero
+#### JE - Desvia Execução se Igual a Zero - if %D == 0
 
 !!! note ""
      je reg
 
  A instrução *je* faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for igual a
-zero.
+para o endereço armazenado em %A, somente se o valor %D for igual a zero.
 
 ```nasm
 je %D
@@ -247,13 +246,13 @@ je %D
 
 ---------------------------------------
 
-#### JNE - Desvia Execução se Diferente de Zero
+#### JNE - Desvia Execução se Diferente de Zero - if %D != 0
 
 !!! note ""
      jne reg
 
  A instrução *jne* faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for
+para o endereço armazenado em %A, somente se o valor do %D for
 diferente de zero.
 
 ```nasm
@@ -262,13 +261,13 @@ jne %D
 
 ---------------------------------------
 
-#### JG - Desvia Execução se Maior que Zero
+#### JG - Desvia Execução se Maior que Zero - if %D > 0
 
 !!! note ""
      jg reg
 
 A instrução *jg* desvia, o fluxo de execução, para o
-endereço armazenado em %A, somente se o valor do reg. for maior que
+endereço armazenado em %A, somente se o valor do %D for maior que
 zero.
 
 ```nasm
@@ -277,13 +276,13 @@ jg %D
 
 ---------------------------------------
 
-#### JGE - Desvia Execução se Maior Igual a Zero
+#### JGE - Desvia Execução se Maior Igual a Zero - if %D >= 0
 
 !!! note ""
      jge reg
 
  A instrução *jge* faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for maior
+para o endereço armazenado em %A, somente se o valor do %D for maior
 ou igual a zero.
 
 ```nasm
@@ -292,13 +291,13 @@ jge %D
 
 ---------------------------------------
 
-#### JL - Desvia Execução se Menor que Zero
+#### JL - Desvia Execução se Menor que Zero - if %D < 0
 
 !!! note ""
      jl reg
 
  A instrução *jl* faz desvio, no fluxo de execução, para o
-endereço armazenado em %A, somente se o valor do reg. for menor que
+endereço armazenado em %A, somente se o valor do %D for menor que
 zero.
 
 ```nasm
@@ -307,13 +306,13 @@ jl %D
 
 ---------------------------------------
 
-#### JLE - Desvia Execução se Menor Igual a Zero
+#### JLE - Desvia Execução se Menor Igual a Zero - if %D <= 0
 
 !!! note ""
      jle reg
 
  A instrução *jle* faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for menor
+para o endereço armazenado em %A, somente se o valor do %D for menor
 ou igual a zero.
 
 ```nasm
@@ -328,7 +327,7 @@ jle %D
      nop
 
  A instrução *nop* não faz nada, usado para pular um ciclo
-de execução.
+de execução(jump).
 
 ```nasm
 nop
@@ -415,6 +414,14 @@ mem: memória, ou seja (%A).
 
     -   incw (%A);
     -   subw (%A),%D,(%A).
+
+ - Não é possível armazenar valores diretamente em %D, só é possível
+   atribuir valor à ele a partir do %A e (%A), um exemplo de instrução
+   que não funcionaria:
+    -   leaw $7, %D
+
+-   As operações de jump só verificar o valor do registrador %D, assim,
+    as instruções jump só serão executadas dependendo do valor de %D
 
 **Observação:**
 
