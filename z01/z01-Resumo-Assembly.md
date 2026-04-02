@@ -351,12 +351,12 @@ mnemônico origem, destino
 **Registradores**
 
 Todos os registradores devem ter como prefixo o sinal de porcentagem
-'%\', por exemplo: %A ou %D.
+`%`, por exemplo: `%A` ou `%D`.
 
 **Valores Literais**
 
 Todos os valores literais devem ter como prefixo o sinal de cifrão
-'\$\', por exemplo: \$55, \$376, sendo o maior valor 2047 (15 bits).
+`$`, por exemplo: `$55`, `$376`.
 
 **Endereçamento de Memória**
 
@@ -408,7 +408,7 @@ mem: memória, ou seja (%A).
     com o valor de %A, ou de (%A) com (%A), tampouco %A com %A.
 
 -   Não é possível somar (ou subtrair, se é que isso faz sentido) o
-    registrador com o mesmo, por exemplo somar %D com %D.
+    registrador com ele mesmo, por exemplo somar %D com %D.
 
 -   Não é possível ler e gravar a memória ao mesmo tempo. Por exemplo,
     as instruções abaixo não funcionam no nosso computador:
