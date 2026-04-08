@@ -2,7 +2,7 @@
 
 !!! tip "Notação"
     - **reg** : Registrador (`%A`, `%D`)
-    - **mem** : Acesso a memória (%A)
+    - **mem** : Acesso a memória (`%A`)
     - **im**: Imediato, pode ser: (`$1`, `$0`, `$-1`)
     - **const**: Constante positiva (`$0`, `$9`, ....)
 
@@ -48,8 +48,11 @@ leaw $15, %A
 !!! note ""
     **movw** im*/reg/mem, reg/mem {, reg/mem, reg/mem}
 
+!!! warning "Restrição"
+    Acesso de memória só podem ser feitos através do registrador `%A`
+
 !!! tip "Dica"
-    A operação de mov faz na verde uma cópia, deixando a origem com o 
+    A operação de mov faz na verdade uma cópia, deixando a origem com o 
     dado original.
 
  A instrução *mov,* copia o valor da primeira posição para
