@@ -1,6 +1,6 @@
 # ASM - jump
 
-Saltos (jumps) são instruções em assembly que permitem a execução não sequêncial de um programa. As instruções de jumpo quando executadas alteram o program counter.
+Saltos (jumps) são instruções em assembly que permitem a execução não sequêncial de um programa. As instruções de jump, quando executadas alteram o program counter.
 
 Nossa CPU é capaz de realizar códigos com condição, tal como:
 
