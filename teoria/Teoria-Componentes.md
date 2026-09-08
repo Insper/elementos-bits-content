@@ -27,7 +27,7 @@ Aqui iremos alguns dos inúmeros componentes combinacionais
     S = not B
     ```
 
-## Multiplexado (mux)
+## Multiplexador (mux)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b2/Multiplexer2.png)
 
