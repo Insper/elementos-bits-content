@@ -40,7 +40,7 @@ Podemos também trazer o *temp 3* para a pilha:
 push temp 3
 ```
 
-### Escrevendo um pixel no LCD
+<!-- ### Escrevendo um pixel no LCD
 
 Para atualizarmos o LCD via VM será necessário primeiro atualizarmos para onde o **that** aponta, **that** é a maneira que possuímos de escrever em qualquer endereço da memória. O exemplo a seguir ilustra como usamos o segmento **that** para escrever nos pixels centrais do LCD, supondo que gostaríamos de realizar a seguinte operação em C.
 
@@ -61,5 +61,5 @@ push contant 1        -- carrega 1 para a pilha
 neg                   -- nega o 1 para obter o valor 0xFFFF
                       -- poderia ter realizado o push contant 4095 no lugar
                       -- dessas duas operações
-pop that 1200         -- faz com que o endereço da memória 16384 + 1200 = 0xFFFF
+pop that 1200         -- faz com que o endereço da memória 16384 + 1200 = 0xFFFF -->
 ```
